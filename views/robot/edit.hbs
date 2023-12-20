@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/add.css">
+</head>
+<body>
+
+  <form action="/robot/edit/{{robot._id}}" method="post">
+    <label >Name:</label>
+    <input type="text" id="name" name="name" value = "{{robot.name}}" required>
+
+    <label >Type:</label>
+      <select aria-label="select a type" name="type" required> 
+        <option value="Gundam ">Gundam </option> 
+        <option value="Karmen rider "> Karmen rider </option> 
+        </select>
+    
+    <label >Image:</label>
+    <input type="text" id="name" name="image" value = "{{robot.image}}" required>
+    <label>Origin:</label>
+    <select aria-label="select an origin" name="origin" required>
+        <option value="">Select an origin</option>
+        {{#each origins}}
+            <option value="{{_id}}" {{#if (isSelected _id car.origin._id)}}selected{{/if}}>{{name}}</option>
+        {{/each}}
+    </select>
+    <label >Price:</label>
+    <input type="text" id="email" name="price" value = "{{robot.price}}" required>
+
+    <label >Description:</label>
+    <input type="text" id="age" name="description" value = "{{robot.description}}" required>
+
+    <button type="submit">Add robot</button>
+  </form>
+
+</body>
+</html>

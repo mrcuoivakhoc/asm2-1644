@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/add.css">
+</head>
+<body>
+  <form action="/car/edit/{{car._id}}" method="post">
+    <label>Name:</label>
+    <input type="text" id="name" name="name" value="{{car.name}}" required>
+
+    <label>Type:</label>
+    <select aria-label="select a type" name="type" required> 
+      <option value="On Road car">On Road car</option> 
+      <option value="Off Road car">Off Road car</option> 
+    </select>
+
+    <label>Image:</label>
+    <input type="text" id="name" name="image" value="{{car.image}}" required>
+
+    <label>Origin:</label>
+    <select aria-label="select an origin" name="origin" required>
+        <option value="">Select an origin</option>
+        {{#each origins}}
+            <option value="{{_id}}" {{#if (isSelected _id car.origin._id)}}selected{{/if}}>{{name}}</option>
+        {{/each}}
+    </select>
+
+
+    <label>Price:</label>
+    <input type="text" id="email" name="price" value="{{car.price}}" required>
+
+    <label>Description:</label>
+    <input type="text" id="age" name="description" value="{{car.description}}" required>
+
+    <button type="submit">Edit car</button>
+  </form>
+</body>
+</html>
