@@ -26,8 +26,32 @@
             <option value="{{_id}}" {{#if (isSelected _id car.origin._id)}}selected{{/if}}>{{name}}</option>
         {{/each}}
     </select>
-
-
+    
+    <label>Color:</label>
+    {{#equal car.color "Black"}}
+    <input type="radio" name="color" value="Black" checked> Black
+    {{else}}
+    <input type="radio" name="color" value="Black"> Black
+    {{/equal}}
+    
+    {{#equal car.color "White"}}
+    <input type="radio" name="color" value="White" checked> White
+    {{else}}
+    <input type="radio" name="color" value="White"> White
+    {{/equal}}
+    
+    {{#equal car.color "Yellow"}}
+    <input type="radio" name="color" value="Yellow" checked> Yellow
+    {{else}}
+    <input type="radio" name="color" value="Yellow"> Yellow
+    {{/equal}}
+    
+    {{#equal car.color "Blue"}}
+    <input type="radio" name="color" value="Blue" checked> Blue
+    {{else}}
+    <input type="radio" name="color" value="Blue"> Blue
+    {{/equal}}
+    <br><br>
     <label>Price:</label>
     <input type="text" id="email" name="price" value="{{car.price}}" required>
 

@@ -78,3 +78,43 @@ router.get('/detail/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// router.get('/sort/asc', async (req, res) => {
+//     //SQL: SELECT * FROM mobiles ORDER BY model
+//     var cars = await CarModel.find().populate('origin').sort({ model: 1 });
+//     res.render('admin/index', { cars })
+//   })

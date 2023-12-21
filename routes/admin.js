@@ -27,5 +27,66 @@ router.get('/login', async (req, res) => {
         else
           res.redirect('/admin/login');
       })
-
+      
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// router.get('/sort/desc', async (req, res) => {
+//   SQL: SELECT * FROM mobiles ORDER BY model DESC
+//  var robots = await RobotModel.find().populate('origin').sort({ model: -1 });
+//  res.render('admin/index', { robots })
+// })

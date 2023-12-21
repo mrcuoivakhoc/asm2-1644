@@ -19,7 +19,7 @@
 
     <label >Image:</label>
     <input type="text" id="name" name="image" required>
-
+    
       <label>Origin:</label>
     <select aria-label="select an origin" name="origin" required>
         <option value="">Select an origin</option>
@@ -27,7 +27,12 @@
             <option value="{{_id}}">{{name}}</option>
         {{/each}}
     </select>
-
+  Car color:
+    <input type="radio" name="color" value="Black"> Black
+    <input type="radio" name="color" value="White"> White
+    <input type="radio" name="color" value="Yellow"> Yellow
+    <input type="radio" name="color" value="Blue"> Blue
+    <br><br>
     <label >Price:</label>
     <input type="text" id="email" name="price" required>
 

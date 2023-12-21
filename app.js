@@ -12,6 +12,8 @@ var robotRouter = require('./routes/robot');
 var adminRouter = require('./routes/admin');
 var originRouter = require('./routes/origin');
 var app = express();
+var hbs = require('hbs');
+hbs.registerHelper('equal', require('handlebars-helper-equal'))
 
 //khai báo & cấu hình body-parser
 var bodyParser = require('body-parser');
